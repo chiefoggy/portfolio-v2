@@ -1,0 +1,36 @@
+.outer {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 80rem;
+    /* max-w-7xl */
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+@media (min-width: 1024px) {
+    .outer {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+.inner {
+    position: relative;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+    .inner {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .inner {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+}

@@ -1,0 +1,73 @@
+.gallery {
+    margin-top: 0.5rem;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.scrollWrapper {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0.5rem;
+    overflow-x: hidden;
+    /* Fixed view, no scrolling */
+    /* Hide scrollbar */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding-bottom: 1rem;
+    /* Space for hover transform */
+}
+
+.scrollWrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.imageWrapper {
+    position: relative;
+    width: 18rem;
+    /* Restored original size */
+    /* w-72 */
+    aspect-ratio: 9/10;
+    flex: none;
+    border-radius: 1rem;
+    background-color: #f4f4f5;
+    /* Zinc-100 */
+    overflow: hidden;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+[data-theme='dark'] .imageWrapper {
+    background-color: #27272a;
+    /* Zinc-800 */
+}
+
+.imageWrapper:hover {
+    transform: scale(1.02);
+    z-index: 10;
+}
+
+.image {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+/* Rotations */
+.imageWrapper:nth-child(odd) {
+    transform: rotate(2deg);
+}
+
+.imageWrapper:nth-child(even) {
+    transform: rotate(-2deg);
+}
+
+.imageWrapper:nth-child(3n) {
+    transform: rotate(1.5deg);
+}
+
+.imageWrapper:nth-child(odd):hover,
+.imageWrapper:nth-child(even):hover,
+.imageWrapper:nth-child(3n):hover {
+    transform: scale(1.05) rotate(0deg);
+}

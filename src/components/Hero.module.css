@@ -1,0 +1,114 @@
+.section {
+    padding: 0 0 3rem;
+    /* Removed top padding, letting Container handle it */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.imageWrapper {
+    margin-bottom: 1.5rem;
+    /* Tighter spacing */
+}
+
+.profileImage {
+    border-radius: 50%;
+    /* Removed heavy border and shadow to look cleaner "at top left" */
+}
+
+.heading {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+    letter-spacing: -0.03em;
+    color: var(--foreground);
+    max-width: 100%;
+}
+
+.subtitle {
+    font-size: 1.25rem;
+    color: #52525B;
+    /* Zinc-600 */
+    margin-bottom: 2rem;
+    font-weight: 500;
+}
+
+[data-theme='dark'] .subtitle {
+    color: #A1A1AA;
+    /* Zinc-400 */
+}
+
+.bio {
+    font-size: 1rem;
+    line-height: 1.75;
+    color: #52525B;
+    /* Zinc-600 */
+    max-width: 100%;
+    margin-bottom: 0.5rem;
+    /* Reduced to pull photos up */
+}
+
+[data-theme='dark'] .bio {
+    color: #A1A1AA;
+    /* Zinc-400 */
+}
+
+.bio strong {
+    color: var(--foreground);
+    font-weight: 600;
+}
+
+.bio a {
+    text-decoration: underline;
+    text-decoration-color: #d4d4d8;
+    /* Zinc-300 */
+    text-underline-offset: 4px;
+    transition: all 0.2s ease;
+}
+
+[data-theme='dark'] .bio a {
+    text-decoration-color: #3f3f46;
+    /* Zinc-700 */
+}
+
+.bio a:hover {
+    color: var(--foreground);
+    /* Keep text color */
+    text-decoration-color: var(--foreground);
+    /* Darken underline on hover */
+    background-color: rgba(0, 0, 0, 0.05);
+    /* Subtle background instead of color */
+}
+
+[data-theme='dark'] .bio a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.socials {
+    display: flex;
+    gap: 1.25rem;
+}
+
+.socialLink {
+    font-size: 1.35rem;
+    color: #71717A;
+    /* Zinc-500 */
+    transition: all 0.2s ease;
+}
+
+.socialLink:hover {
+    color: var(--foreground);
+    transform: translateY(-2px);
+}
+
+@media (max-width: 640px) {
+    .section {
+        padding: 8rem 0 4rem;
+    }
+
+    .heading {
+        font-size: 3rem;
+    }
+}

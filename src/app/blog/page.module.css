@@ -1,0 +1,233 @@
+/* Featured Card */
+.featuredCard {
+    grid-column: 1 / -1;
+    /* Span full width */
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    background: transparent;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #e4e4e7;
+    margin-bottom: 2rem;
+    transition: transform 0.2s ease;
+}
+
+[data-theme='dark'] .featuredCard {
+    border-color: #27272a;
+}
+
+.featuredCard:hover {
+    transform: translateY(-4px);
+}
+
+@media (min-width: 768px) {
+    .featuredCard {
+        grid-template-columns: 1.5fr 1fr;
+        gap: 3rem;
+        align-items: center;
+    }
+}
+
+.featuredImageWrapper {
+    position: relative;
+    width: 100%;
+    max-width: 450px;
+    /* Constrain size */
+    height: 100%;
+    /* Fill the grid height if needed, or stick to auto */
+    /* Removed fixed aspect-ratio to fit content */
+    border-radius: 1rem;
+    overflow: hidden;
+    background-color: #f4f4f5;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+[data-theme='dark'] .featuredImageWrapper {
+    background-color: #27272a;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+}
+
+.featuredContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.featuredTitle {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #27272a;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+[data-theme='dark'] .featuredTitle {
+    color: #f4f4f5;
+}
+
+.featuredDescription {
+    font-size: 1.125rem;
+    color: #52525b;
+    line-height: 1.75;
+    max-width: 40rem;
+}
+
+[data-theme='dark'] .featuredDescription {
+    color: #a1a1aa;
+}
+
+/* Existing styles below... */
+.mainContainer {
+    margin-top: 6rem;
+}
+
+@media (min-width: 640px) {
+    .mainContainer {
+        margin-top: 7rem;
+    }
+}
+
+.header {
+    margin-bottom: 2rem;
+    /* Reduced from 4rem */
+    max-width: 42rem;
+}
+
+.title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.025em;
+    color: #27272a;
+    /* Zinc-800 */
+    margin-bottom: 1.5rem;
+}
+
+[data-theme='dark'] .title {
+    color: #f4f4f5;
+    /* Zinc-100 */
+}
+
+@media (min-width: 640px) {
+    .title {
+        font-size: 3rem;
+        /* text-5xl */
+    }
+}
+
+.intro {
+    font-size: 1rem;
+    line-height: 1.75;
+    color: #52525b;
+    /* Zinc-600 */
+}
+
+[data-theme='dark'] .intro {
+    color: #a1a1aa;
+    /* Zinc-400 */
+}
+
+/* Card Grid Layout */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+@media (min-width: 640px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Card Styles */
+.card {
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+    transition: transform 0.2s ease;
+    /* group: card; - removed invalid CSS property */
+}
+
+.card:hover {
+    transform: translateY(-4px);
+}
+
+.imageWrapper {
+    position: relative;
+    width: 100%;
+    border-radius: 1rem;
+    overflow: hidden;
+    background-color: #f4f4f5;
+    /* Zinc-100 */
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+[data-theme='dark'] .imageWrapper {
+    background-color: #27272a;
+    /* Zinc-800 */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+}
+
+.cardImage {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease;
+}
+
+.card:hover .cardImage {
+    transform: scale(1.05);
+}
+
+.cardContent {
+    display: flex;
+    flex-direction: column;
+}
+
+.cardDate {
+    font-size: 0.875rem;
+    color: #a1a1aa;
+    /* Zinc-400 */
+    margin-bottom: 0.75rem;
+    padding-left: 0.75rem;
+    border-left: 2px solid #e4e4e7;
+    /* Zinc-200 */
+    line-height: 1.5;
+}
+
+[data-theme='dark'] .cardDate {
+    border-color: #3f3f46;
+    /* Zinc-700 */
+}
+
+.cardTitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #27272a;
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+}
+
+[data-theme='dark'] .cardTitle {
+    color: #f4f4f5;
+}
+
+.cardDescription {
+    font-size: 0.95rem;
+    color: #52525b;
+    /* Zinc-600 */
+    line-height: 1.6;
+}
+
+[data-theme='dark'] .cardDescription {
+    color: #a1a1aa;
+    /* Zinc-400 */
+}

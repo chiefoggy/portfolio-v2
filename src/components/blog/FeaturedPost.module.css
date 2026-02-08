@@ -1,0 +1,134 @@
+.card {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    background: linear-gradient(145deg, #1e1b4b, #0f172a);
+    /* Dark gradient base */
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 3rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    min-height: 400px;
+}
+
+[data-theme='light'] .card {
+    background: white;
+    border: 1px solid var(--border);
+}
+
+.imageWrapper {
+    position: relative;
+    background: #000;
+    height: 100%;
+    min-height: 300px;
+}
+
+.imagePlaceholder {
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, #4f46e5 0%, #1e1b4b 100%);
+    opacity: 0.8;
+}
+
+.content {
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+}
+
+[data-theme='light'] .content {
+    color: var(--foreground);
+}
+
+.label {
+    color: #818cf8;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.label::before {
+    content: '★';
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(to right, #fff, #94a3b8);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+[data-theme='light'] .title {
+    background: none;
+    -webkit-text-fill-color: inherit;
+    color: var(--foreground);
+}
+
+.excerpt {
+    color: #cbd5e1;
+    line-height: 1.6;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+[data-theme='light'] .excerpt {
+    color: #4b5563;
+}
+
+.meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: auto;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.date {
+    color: #94a3b8;
+    font-size: 0.9rem;
+}
+
+.button {
+    background: #4f46e5;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: all 0.2s;
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+}
+
+.button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(79, 70, 229, 0.4);
+}
+
+@media (max-width: 768px) {
+    .card {
+        grid-template-columns: 1fr;
+    }
+
+    .imageWrapper {
+        height: 250px;
+    }
+
+    .content {
+        padding: 1.5rem;
+    }
+
+    .title {
+        font-size: 1.75rem;
+    }
+}

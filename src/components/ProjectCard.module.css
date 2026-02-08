@@ -1,0 +1,110 @@
+.card {
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    overflow: visible;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card:hover .imageHeader {
+    box-shadow: 0 20px 40px -5px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme='dark'] .card:hover .imageHeader {
+    box-shadow: 0 20px 40px -5px rgba(0, 0, 0, 0.4);
+}
+
+.imageHeader {
+    height: 280px;
+    width: 100%;
+    border-radius: 16px;
+    margin-bottom: 1.5rem;
+    transition: box-shadow 0.3s ease;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05);
+}
+
+[data-theme='dark'] .imageHeader {
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+.content {
+    padding: 0;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.75rem;
+}
+
+.title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--foreground);
+    margin: 0;
+    letter-spacing: -0.01em;
+}
+
+.links {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.iconLink {
+    color: #a1a1aa;
+    font-size: 1.1rem;
+    transition: color 0.2s;
+    display: flex;
+    align-items: center;
+}
+
+.iconLink:hover {
+    color: var(--accent);
+}
+
+.description {
+    font-size: 0.925rem;
+    color: #71717A;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    flex-grow: 0;
+}
+
+[data-theme='dark'] .description {
+    color: #A1A1AA;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: auto;
+}
+
+.tag {
+    font-size: 0.7rem;
+    padding: 0.3rem 0.8rem;
+    background: rgba(255, 255, 255, 0.05);
+    /* very subtle pill bg */
+    border-radius: 4px;
+    /* Slightly more square than round */
+    color: var(--accent);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+[data-theme='light'] .tag {
+    background: rgba(0, 0, 0, 0.05);
+}
