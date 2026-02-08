@@ -7,7 +7,7 @@ import styles from './ExperienceSection.module.css';
 const EXPERIENCE_DATA = [
     {
         id: 'aether',
-        role: 'AI Researcher',
+        role: 'Software Developer Intern',
         company: 'AETHER',
         date: 'Dec 2025 - Present',
         description: ` 
