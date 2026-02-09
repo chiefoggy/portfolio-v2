@@ -63,21 +63,23 @@
     height: 100%;
 }
 
-/* Rotations */
-.imageWrapper:nth-child(odd) {
-    transform: rotate(2deg);
-}
+/* Desktop only rotations */
+@media (min-width: 640px) {
+    .imageWrapper:nth-child(odd) {
+        transform: rotate(2deg);
+    }
 
-.imageWrapper:nth-child(even) {
-    transform: rotate(-2deg);
-}
+    .imageWrapper:nth-child(even) {
+        transform: rotate(-2deg);
+    }
 
-.imageWrapper:nth-child(3n) {
-    transform: rotate(1.5deg);
-}
+    .imageWrapper:nth-child(3n) {
+        transform: rotate(1.5deg);
+    }
 
-.imageWrapper:nth-child(odd):hover,
-.imageWrapper:nth-child(even):hover,
-.imageWrapper:nth-child(3n):hover {
-    transform: scale(1.05) rotate(0deg);
+    .imageWrapper:nth-child(odd):hover,
+    .imageWrapper:nth-child(even):hover,
+    .imageWrapper:nth-child(3n):hover {
+        transform: scale(1.05) rotate(0deg);
+    }
 }
