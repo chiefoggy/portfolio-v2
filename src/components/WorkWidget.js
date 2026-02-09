@@ -7,14 +7,14 @@ const WORK_HISTORY = [
         role: 'Intern',
         start: '2025',
         end: 'Present',
-        logo: '/logo-aether.png' // Placeholder
+        logo: '/assets/aether-logo.png'
     },
     {
         company: 'Project Quik',
         role: 'Co-Founder',
         start: '2024',
         end: 'Present',
-        logo: '/logo-quik.png' // Placeholder
+        logo: '/assets/quik-logo.png'
     },
 
 ];
@@ -33,8 +33,13 @@ export default function WorkWidget() {
                 {WORK_HISTORY.map((role, idx) => (
                     <div key={idx} className={styles.item}>
                         <div className={styles.logo}>
-                            {/* Placeholder for company logo */}
-                            <div style={{ width: '60%', height: '60%', background: '#d4d4d8', borderRadius: '50%' }} />
+                            <Image
+                                src={role.logo}
+                                alt={`${role.company} logo`}
+                                width={40}
+                                height={40}
+                                className={styles.logoImg}
+                            />
                         </div>
                         <div className={styles.content}>
                             <div className={styles.company}>{role.company}</div>

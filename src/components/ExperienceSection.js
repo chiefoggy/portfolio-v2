@@ -9,6 +9,7 @@ const EXPERIENCE_DATA = [
         id: 'aether',
         role: 'Software Developer Intern',
         company: 'AETHER',
+        logo: '/assets/aether-logo.png',
         date: 'Dec 2025 - Present',
         description: ` 
         Currently interning at AETHER, where I previously revamped the website aetherraid.dev and am currently working on using language models to build a performance evaluation system.
@@ -20,6 +21,7 @@ const EXPERIENCE_DATA = [
         id: 'quik',
         role: 'Co-Founder',
         company: 'Project Quik',
+        logo: '/assets/quik-logo.png',
         date: '2023 - Present',
         description: `
         • Create and manage marketing content, including Instagram posts and investor/client pitch decks, to support brand growth and engagement.
@@ -66,6 +68,15 @@ export default function ExperienceSection() {
                     {/* Right Details Pane */}
                     <div className={styles.detailPane}>
                         <h3 className={styles.roleTitle}>
+                            {activeItem.logo && (
+                                <Image
+                                    src={activeItem.logo}
+                                    alt={`${activeItem.company} logo`}
+                                    width={40}
+                                    height={40}
+                                    style={{ borderRadius: '50%', objectFit: 'cover' }}
+                                />
+                            )}
                             {activeItem.role}
                             <span className={styles.company}> @ {activeItem.company}</span>
                         </h3>

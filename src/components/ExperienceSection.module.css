@@ -36,6 +36,10 @@
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    border-left: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+[data-theme='dark'] .list {
     border-left: 2px solid rgba(255, 255, 255, 0.05);
 }
 
@@ -50,12 +54,21 @@
     gap: 0.25rem;
     position: relative;
     overflow: hidden;
+    color: #52525b;
+    /* Zinc-600 */
+}
+
+[data-theme='dark'] .listItem {
     color: #a1a1aa;
 }
 
 .listItem:hover {
-    background: rgba(255, 255, 255, 0.03);
+    background: rgba(0, 0, 0, 0.05);
     color: var(--foreground);
+}
+
+[data-theme='dark'] .listItem:hover {
+    background: rgba(255, 255, 255, 0.03);
 }
 
 .activeItem {
@@ -86,18 +99,28 @@
 
 .period {
     font-size: 0.9rem;
-    color: #71717a;
+    color: #52525b;
+    /* Zinc-600 */
     margin-bottom: 1.5rem;
     font-family: monospace;
     letter-spacing: 0.05em;
 }
 
+[data-theme='dark'] .period {
+    color: #71717a;
+}
+
 .description {
     font-size: 1rem;
     line-height: 1.7;
-    color: #d4d4d8;
+    color: #3f3f46;
+    /* Zinc-700 */
     margin-bottom: 2rem;
     white-space: pre-line;
+}
+
+[data-theme='dark'] .description {
+    color: #d4d4d8;
 }
 
 /* Gallery Styles */
