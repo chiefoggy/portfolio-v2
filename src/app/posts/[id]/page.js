@@ -1,5 +1,7 @@
-import { getPostData } from '../../../lib/markdown';
+import { getPostData, imageMetadataPlugin } from '../../../lib/markdown';
 import { Container } from '../../../components/Container';
+import { Carousel } from '../../../components/Carousel';
+import { MDXRemote } from 'next-mdx-remote/rsc';
 import styles from './page.module.css';
 
 export async function generateMetadata({ params }) {
@@ -33,7 +35,17 @@ export default async function Post({ params }) {
                 </div>
             </header>
 
-            <article className={styles.content} dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+            <article className={styles.content}>
+                <MDXRemote 
+                    source={postData.content} 
+                    components={{ Carousel }} 
+                    options={{
+                        mdxOptions: {
+                            remarkPlugins: [imageMetadataPlugin],
+                        }
+                    }}
+                />
+            </article>
         </Container>
     );
 }

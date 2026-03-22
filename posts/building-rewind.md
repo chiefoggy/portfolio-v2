@@ -41,5 +41,5 @@ I'm glad to announce that were among **Top 9 finalists**, each winning a pair of
 ## ...and some stuff I didn't enjoy so much:
 - being sick basically throughout the entire event
 - the NUS Guest WiFi disconnecting so frequently 💀
-<br>
+<br />
 All in all, this hackathon was a very rewarding experience and I really enjoyed myself there (other than the cold 🤧)

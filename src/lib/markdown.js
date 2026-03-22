@@ -65,35 +65,34 @@ export function getAllPostIds() {
     });
 }
 
+export function imageMetadataPlugin() {
+    return (tree) => {
+        function visit(node) {
+            if (node.type === 'image') {
+                const alt = node.alt || '';
+                const match = alt.match(/^(.*)\|\s*(\d+)\s*$/);
+                if (match) {
+                    node.alt = match[1].trim();
+                    // Inject width into HTML properties
+                    node.data = node.data || {};
+                    node.data.hProperties = node.data.hProperties || {};
+                    node.data.hProperties.width = match[2];
+                }
+            }
+            if (node.children) {
+                node.children.forEach(visit);
+            }
+        }
+        visit(tree);
+    };
+}
+
 export async function getPostData(id) {
     const fullPath = path.join(postsDirectory, `${id}.md`);
     const fileContents = fs.readFileSync(fullPath, 'utf8');
 
     // Use gray-matter to parse the post metadata section
     const matterResult = matter(fileContents);
-
-    // Custom plugin to extract width from alt text (e.g. "Alt Text | 600")
-    function imageMetadataPlugin() {
-        return (tree) => {
-            function visit(node) {
-                if (node.type === 'image') {
-                    const alt = node.alt || '';
-                    const match = alt.match(/^(.*)\|\s*(\d+)\s*$/);
-                    if (match) {
-                        node.alt = match[1].trim();
-                        // Inject width into HTML properties
-                        node.data = node.data || {};
-                        node.data.hProperties = node.data.hProperties || {};
-                        node.data.hProperties.width = match[2];
-                    }
-                }
-                if (node.children) {
-                    node.children.forEach(visit);
-                }
-            }
-            visit(tree);
-        };
-    }
 
     // Use remark to convert markdown into HTML string
     const processedContent = await remark()
@@ -106,6 +105,7 @@ export async function getPostData(id) {
     return {
         id,
         contentHtml,
+        content: matterResult.content,
         ...matterResult.data,
     };
 }
