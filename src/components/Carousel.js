@@ -33,12 +33,11 @@ export function Carousel(props) {
 
   return (
     <div style={{ position: 'relative', width: '100%', margin: '2rem 0', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-      <div style={{ position: 'relative', width: '100%', maxWidth: '800px', aspectRatio: '16/9', overflow: 'hidden', borderRadius: '8px', backgroundColor: '#f0f0f0' }}>
-        <Image
+      <div style={{ position: 'relative', width: '100%', maxWidth: '800px', display: 'flex', justifyContent: 'center' }}>
+        <img
           src={parsedImages[currentIndex].src}
           alt={parsedImages[currentIndex].alt || 'Carousel image'}
-          fill
-          style={{ objectFit: 'contain' }}
+          style={{ width: '100%', height: 'auto', maxHeight: '75vh', objectFit: 'contain', borderRadius: '8px' }}
         />
         
         {parsedImages.length > 1 && (
