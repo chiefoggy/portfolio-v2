@@ -36,7 +36,7 @@ export function Carousel(props) {
       <div style={{ position: 'relative', width: '100%', maxWidth: '800px', display: 'flex', justifyContent: 'center' }}>
         <img
           src={parsedImages[currentIndex].src}
-          alt={parsedImages[currentIndex].alt || 'Carousel image'}
+          alt="Carousel image"
           style={{ width: '100%', height: 'auto', maxHeight: '75vh', objectFit: 'contain', borderRadius: '8px' }}
         />
         
