@@ -24,13 +24,13 @@ export default function Hero() {
             </p>
             <div className={styles.bio}>
                 <p>
-                    I'm Wei Dong, a JC graduate who loves building things with code.
+                    I'm Wei Dong, a JC graduate who loves building things with code. Currently serving my full-time national service.
                 </p>
                 <p>
                     Co-founded <a href="https://www.projectquik.co" target="_blank" rel="noopener noreferrer">Project Quik</a> to make game development faster and easier for indie creators
                 </p>
                 <p>
-                    Currently interning at <a href="https://aetherraid.dev" target="_blank" rel="noopener noreferrer">AETHER</a>.
+                    Previously interned at <a href="https://aetherraid.dev" target="_blank" rel="noopener noreferrer">AETHER</a>.
                 </p>
             </div>
             <div className={styles.socials}>

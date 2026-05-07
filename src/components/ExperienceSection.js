@@ -10,9 +10,9 @@ const EXPERIENCE_DATA = [
         role: 'Software Developer Intern',
         company: 'AETHER',
         logo: '/assets/aether-logo.png',
-        date: 'Dec 2025 - Present',
+        date: 'Dec 2025 - Mar 2026',
         description: ` 
-        Currently interning at AETHER, where I previously revamped the website aetherraid.dev and am currently working on using language models to build a performance evaluation system.
+        Previously interned at AETHER, where I previously revamped the website aetherraid.dev and worked on using language models to build a performance evaluation system.
         `,
         tags: ['AI Agents', 'Cognitive Science', 'Human-Machine Teaming'],
         gallery: []

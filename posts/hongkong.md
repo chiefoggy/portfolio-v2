@@ -28,6 +28,7 @@ After dinner at a nearby eatery, we made our way to the Wan Chai Harbourfront, t
 ## Day 2
 
 We started off the day with some dim sum at a nearby eatery. Then, we took the MTR to Tung Chung station where we made our way to the Ngong Ping Cable Car. There was quite a queue for the cable car and we waited for easily over an hour. The cable car ride took us 5.7km and lasted 25 minutes to reach Lantau Island, where we had a panaromic view of the nearby buildings and mountains. We then toured the Ngong Ping site and had a short visit to the Po Lin Monastery and iconic 34m Tian Tan Buddha statue. There were quite a lot of eateries there, but they were quite pricey. We had some dessert there, such as sesame paste and beancurd. <br></br>We then took a short bus ride to Tai O fishing village and had a short tour around the place, where we walked down the market streets and the waters. There was also a boat ride where you could try to spot pink dolphins, but we unfortunately did not have the time to try that. It was quite a different view of the city landscape of Hong Kong we've seen so far. 
+edit: that night, we also went around the mong kok/jordan area and visited the night markets in the vicinity (didn't really find most of the stuff there interesting/special though)
 
 <Carousel data='[
 {"src": "/assets/hongkong/day2/hotelview.jpg", "subtext": "View from our hotel room"}, 
