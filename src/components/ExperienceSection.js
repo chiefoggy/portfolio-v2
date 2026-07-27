@@ -12,7 +12,7 @@ const EXPERIENCE_DATA = [
         logo: '/assets/aether-logo.png',
         date: 'Dec 2025 - Mar 2026',
         description: ` 
-        Previously interned at AETHER, where I previously revamped the website aetherraid.dev and worked on using language models to build a performance evaluation system.
+        Previously interned at AETHER, where I previously revamped the website https://aether.sutd.edu.sg/ and worked on using language models to build a performance evaluation system.
         `,
         tags: ['AI Agents', 'Cognitive Science', 'Human-Machine Teaming'],
         gallery: []
