@@ -30,7 +30,7 @@ export default function Hero() {
                     Co-founded <a href="https://www.projectquik.co" target="_blank" rel="noopener noreferrer">Project Quik</a> to make game development faster and easier for indie creators
                 </p>
                 <p>
-                    Previously interned at <a href="https://aetherraid.dev" target="_blank" rel="noopener noreferrer">AETHER</a>.
+                    Previously interned at <a href="https://aether.sutd.edu.sg/" target="_blank" rel="noopener noreferrer">AETHER</a>.
                 </p>
             </div>
             <div className={styles.socials}>
