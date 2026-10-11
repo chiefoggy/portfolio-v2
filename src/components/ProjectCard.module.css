@@ -28,6 +28,8 @@
     margin-bottom: 1.5rem;
     transition: box-shadow 0.3s ease;
     box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: hidden;
 }
 
 [data-theme='dark'] .imageHeader {
@@ -75,14 +77,14 @@
 
 .description {
     font-size: 0.925rem;
-    color: #71717A;
+    color: #71717a;
     line-height: 1.6;
     margin-bottom: 1rem;
     flex-grow: 0;
 }
 
 [data-theme='dark'] .description {
-    color: #A1A1AA;
+    color: #a1a1aa;
 }
 
 .tags {
@@ -96,9 +98,7 @@
     font-size: 0.7rem;
     padding: 0.3rem 0.8rem;
     background: rgba(255, 255, 255, 0.05);
-    /* very subtle pill bg */
     border-radius: 4px;
-    /* Slightly more square than round */
     color: var(--accent);
     font-weight: 600;
     text-transform: uppercase;

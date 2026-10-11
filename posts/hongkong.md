@@ -4,7 +4,7 @@ date: '2026-04-06'
 description: 'My March trip to Hong Kong'
 tags: ['Travel']
 featured: false
-bannerImage: '/assets/hongkong.png'
+bannerImage: '/assets/hongkong.jpg'
 ---
 
 My family and I recently went for a 5-day short trip to Hong Kong with a day trip to Shenzhen, and I'll like to jot down my memories for me to look back in a few years and reminscne about them. 

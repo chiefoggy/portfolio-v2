@@ -19,12 +19,10 @@
 
 .imageWrapper {
     position: relative;
-    /* Default width for grid cell */
     width: 100%;
     aspect-ratio: 9/10;
     border-radius: 1rem;
     background-color: #f4f4f5;
-    /* Zinc-100 */
     overflow: hidden;
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease;
@@ -49,7 +47,6 @@
 
 [data-theme='dark'] .imageWrapper {
     background-color: #27272a;
-    /* Zinc-800 */
 }
 
 .imageWrapper:hover {

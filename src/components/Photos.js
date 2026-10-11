@@ -13,16 +13,12 @@ export default function Photos() {
         <div className={styles.gallery}>
             <div className={styles.scrollWrapper}>
                 {photos.map((photo, idx) => (
-                    <div key={idx} className={styles.imageWrapper}
-                        style={{
-                            // Add some random-ish rotation logic override or just rely on CSS nth-child
-                        }}
-                    >
+                    <div key={idx} className={styles.imageWrapper}>
                         <Image
                             src={photo.src}
                             alt={photo.alt}
                             fill
-                            sizes="(min-width: 640px) 18rem, 11rem"
+                            sizes="(min-width: 640px) 25vw, 50vw"
                             className={styles.image}
                         />
                     </div>

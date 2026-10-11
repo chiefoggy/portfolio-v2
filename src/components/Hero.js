@@ -24,7 +24,10 @@ export default function Hero() {
             </p>
             <div className={styles.bio}>
                 <p>
-                    I'm Wei Dong, a JC graduate who loves building things with code. Currently serving my full-time national service.
+                    I'm Wei Dong, a JC graduate who loves building things with code. Currently a full-time National Serviceman.
+                </p>
+                <p>
+                    Incoming NUS Computer Science student.
                 </p>
                 <p>
                     Co-founded <a href="https://www.projectquik.co" target="_blank" rel="noopener noreferrer">Project Quik</a> to make game development faster and easier for indie creators

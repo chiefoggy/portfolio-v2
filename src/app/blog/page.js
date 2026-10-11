@@ -76,11 +76,9 @@ export default function Blog() {
                                 <Image
                                     src={bannerImage || image}
                                     alt={title}
-                                    width={0}
-                                    height={0}
-                                    sizes="100vw"
+                                    fill
+                                    sizes="96px"
                                     className={styles.cardImage}
-                                    style={{ width: '100%', height: 'auto' }}
                                 />
                             </div>
                         )}

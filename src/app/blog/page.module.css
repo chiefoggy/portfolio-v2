@@ -127,93 +127,74 @@
     /* Zinc-400 */
 }
 
-/* Card Grid Layout */
+/* Card Grid Layout — featured spans full width, other posts are a single column of rows */
 .grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-}
-
-@media (min-width: 640px) {
-    .grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (min-width: 1024px) {
-    .grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-/* Card Styles */
-.card {
     display: flex;
     flex-direction: column;
+    gap: 0;
+}
+
+/* Non-featured card — horizontal row */
+.card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 1.25rem 0;
+    border-bottom: 1px solid var(--border);
     background: transparent;
-    transition: transform 0.2s ease;
-    /* group: card; - removed invalid CSS property */
+    transition: opacity 0.2s ease;
 }
 
 .card:hover {
-    transform: translateY(-4px);
+    opacity: 0.75;
 }
 
+/* Square thumbnail */
 .imageWrapper {
     position: relative;
-    width: 100%;
-    border-radius: 1rem;
+    flex-shrink: 0;
+    width: 80px;
+    height: 80px;
+    border-radius: 0.5rem;
     overflow: hidden;
     background-color: #f4f4f5;
-    /* Zinc-100 */
-    margin-bottom: 1.5rem;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
 [data-theme='dark'] .imageWrapper {
     background-color: #27272a;
-    /* Zinc-800 */
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
 }
 
 .cardImage {
     object-fit: cover;
     width: 100%;
     height: 100%;
-    transition: transform 0.5s ease;
-}
-
-.card:hover .cardImage {
-    transform: scale(1.05);
 }
 
 .cardContent {
     display: flex;
     flex-direction: column;
+    min-width: 0;
+    /* allow text to truncate inside flex */
 }
 
 .cardDate {
-    font-size: 0.875rem;
+    font-size: 0.8rem;
     color: #a1a1aa;
-    /* Zinc-400 */
-    margin-bottom: 0.75rem;
-    padding-left: 0.75rem;
-    border-left: 2px solid #e4e4e7;
-    /* Zinc-200 */
-    line-height: 1.5;
+    margin-bottom: 0.3rem;
+    line-height: 1.4;
 }
 
 [data-theme='dark'] .cardDate {
-    border-color: #3f3f46;
-    /* Zinc-700 */
+    color: #71717a;
 }
 
 .cardTitle {
-    font-size: 1.25rem;
+    font-size: 1rem;
     font-weight: 600;
     color: #27272a;
-    margin-bottom: 0.75rem;
-    line-height: 1.4;
+    margin-bottom: 0.3rem;
+    line-height: 1.35;
 }
 
 [data-theme='dark'] .cardTitle {
@@ -221,13 +202,23 @@
 }
 
 .cardDescription {
-    font-size: 0.95rem;
-    color: #52525b;
-    /* Zinc-600 */
-    line-height: 1.6;
+    font-size: 0.875rem;
+    color: #71717a;
+    line-height: 1.5;
+    /* clamp to 2 lines */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 [data-theme='dark'] .cardDescription {
     color: #a1a1aa;
-    /* Zinc-400 */
+}
+
+@media (min-width: 640px) {
+    .imageWrapper {
+        width: 96px;
+        height: 96px;
+    }
 }
